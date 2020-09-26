@@ -7,6 +7,7 @@
 \usepackage{amsmath, amsfonts, amsthm}
 \usepackage{amssymb}
 \usepackage{mathrsfs}
+\usepackage{mathtools}
 
 % For including graphics (such as charts and diagrams.)
 \usepackage{graphicx}
@@ -76,7 +77,7 @@
 % The problem environment is a regular ams theorem environment with "Problem"
 % text and some leading space to give some separation between the problems.
 \theoremstyle{definition}
-\newtheorem{problem-internal}{Problem}[subsection]
+\newtheorem{problem-internal}{}[subsection]
 \newenvironment{problem}{
 	\medskip
 	\begin{problem-internal}
@@ -99,6 +100,10 @@
 	}{
 \end{proof}
 }
+
+% Proposition environment for formatting some problems.
+\theoremstyle{theorem}
+\newtheorem*{proposition}{Proposition}
 
 % Renewing the \thesection command changes the section numbers to roman
 % numerals. This matches the style of the Aluffi textbook.
@@ -145,6 +150,7 @@
 
 \newcommand{\mGL}{\mathrm{GL}}
 \newcommand{\mSL}{\mathrm{SL}}
+\newcommand{\mPSL}{\mathrm{PSL}}
 \newcommand{\mO}{\mathrm{O}}
 \newcommand{\mSO}{\mathrm{SO}}
 \newcommand{\mU}{\mathrm{U}}
