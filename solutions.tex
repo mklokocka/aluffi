@@ -1,4 +1,4 @@
-\documentclass{scrartcl}
+\documentclass[leqno]{scrartcl}
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
 
@@ -8,6 +8,8 @@
 \usepackage{amssymb}
 \usepackage{mathrsfs}
 \usepackage{mathtools}
+
+\usepackage{enumitem}
 
 % For including graphics (such as charts and diagrams.)
 \usepackage{graphicx}
@@ -122,14 +124,20 @@
 
 % Set with spacing padding for the curly braces.
 \newcommand{\set}[1]{\left\{\,#1\,\right\}}
+
 \newcommand{\id}{\mathrm{id}}
 \DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\coker}{coker}
+\DeclareMathOperator{\stab}{Stab}
+\DeclareMathOperator{\spec}{Spec}
+\newcommand{\pset}{\mathscr{P}}
 \newcommand{\Obj}{\mathrm{Obj}}
 \newcommand{\Hom}{\mathrm{Hom}}
 \newcommand{\End}{\mathrm{End}}
 \newcommand{\Aut}{\mathrm{Aut}}
 \newcommand{\Inn}{\mathrm{Inn}}
 \newcommand{\abs}[1]{\left|#1\right|}
+\newcommand{\norm}[1]{\left|\left|#1\right|\right|}
 % Inuitive "from" command draws an arrow pointing left, A <- B reads "A from p"
 \newcommand{\from}{\leftarrow}
 \newcommand{\quotuniv}[1]{\overline{#1}}
@@ -140,6 +148,10 @@
 \newcommand{\Cset}{\mathsf{Set}}
 \newcommand{\Cgrp}{\mathsf{Grp}}
 \newcommand{\Cab}{\mathsf{Ab}}
+\newcommand{\CGset}{\ensuremath{G\text{-}\Cset}}
+\newcommand{\Cring}{\ensuremath{\mathsf{Ring}}}
+\newcommand{\CRmod}{\ensuremath{R\text{-}\mathsf{Mod}}}
+\newcommand{\CRalg}{\ensuremath{R\text{-}\mathsf{Alg}}}
 
 % Frequently used sets.
 \newcommand{\N}{\mathbb{N}}
@@ -147,7 +159,10 @@
 \newcommand{\Qs}{\mathbb{Q}}
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\Cs}{\mathbb{C}}
+\newcommand{\Hs}{\mathbb{H}}
 
+% Matrices.
+\newcommand{\mM}{\mathcal{M}}
 \newcommand{\mGL}{\mathrm{GL}}
 \newcommand{\mSL}{\mathrm{SL}}
 \newcommand{\mPSL}{\mathrm{PSL}}
@@ -155,10 +170,21 @@
 \newcommand{\mSO}{\mathrm{SO}}
 \newcommand{\mU}{\mathrm{U}}
 \newcommand{\mSU}{\mathrm{SU}}
+\newcommand{\mgl}{\mathfrak{gl}}
+\newcommand{\msl}{\mathfrak{sl}}
+\newcommand{\mso}{\mathfrak{so}}
+\newcommand{\msu}{\mathfrak{su}}
 
 % Frequently used groups.
 \newcommand{\Z}[1]{\mathbb{Z}/#1\mathbb{Z}}
+\newcommand{\gen}[1]{\ensuremath{\langle #1 \rangle}}
+
+% Operators.
 \DeclareMathOperator{\lcm}{lcm}
+\DeclareMathOperator{\tr}{tr}
+
+% Vectors.
+\renewcommand{\vec}[1]{\mathbf{#1}}
 
 \begin{document}
 	
@@ -167,5 +193,9 @@
 \clearpage
 
 \input{chapter02.tex}
+
+\clearpage
+
+\input{chapter03.tex}
 
 \end{document}
